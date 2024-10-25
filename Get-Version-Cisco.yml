@@ -1,7 +1,8 @@
 ---
-- name: Gather version information from Cisco devices
+- name: Gather version information from Cisco router via SSH
+  hosts: cisco_router
+  connection: paramiko
   gather_facts: no
-  hosts: cisco_devices
   tasks:
     - name: Get version information
       ios_command:
