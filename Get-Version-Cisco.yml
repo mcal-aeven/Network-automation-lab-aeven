@@ -3,6 +3,8 @@
   hosts: "{{ target_hosts | default('all') }}"
   connection: network_cli
   gather_facts: no
+    vars:
+    ansible_network_os: cisco.ios.ios
   tasks:
     - name: Get version information
       ios_command:
