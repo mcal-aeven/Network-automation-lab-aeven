@@ -1,13 +1,14 @@
 ---
 - name: Gather version information from Cisco router via SSH
   hosts: cisco_router
-  connection: paramiko
+  connection: local
   gather_facts: no
   tasks:
     - name: Get version information
       ios_command:
         commands:
           - show version
+        provider: "{{ cli }}"
       register: version_info
 
     - name: Display version information
