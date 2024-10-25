@@ -1,7 +1,5 @@
 ---
 - name: Gather version information from Cisco router via SSH
-  ansible.builtin.pip:
-    name: ansible-pylibssh
   hosts: "{{ target_hosts | default('all') }}"
   connection: network_cli
   gather_facts: no
