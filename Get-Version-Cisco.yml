@@ -1,0 +1,14 @@
+---
+- name: Gather version information from Cisco devices
+  hosts: cisco_devices
+  gather_facts: no
+  tasks:
+    - name: Get version information
+      ios_command:
+        commands:
+          - show version
+      register: version_info
+
+    - name: Display version information
+      debug:
+        var: version_info.stdout_lines
