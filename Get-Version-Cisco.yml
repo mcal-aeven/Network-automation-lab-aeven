@@ -1,6 +1,5 @@
 ---
 - name: Gather version information from Cisco devices
-  hosts: cisco_devices
   gather_facts: no
   tasks:
     - name: Get version information
