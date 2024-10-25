@@ -1,6 +1,6 @@
 ---
 - name: Gather version information from Cisco router via SSH
-  hosts: cisco_router
+  hosts: "{{ target_hosts | default('all') }}"
   connection: local
   gather_facts: no
   tasks:
