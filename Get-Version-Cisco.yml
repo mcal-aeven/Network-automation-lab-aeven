@@ -1,6 +1,7 @@
 ---
 - name: Gather version information from Cisco devices
   gather_facts: no
+  hosts: cisco_devices
   tasks:
     - name: Get version information
       ios_command:
