@@ -4,7 +4,7 @@
   connection: network_cli
   gather_facts: no
   vars:
-    ansible_python_interpreter: /usr/lib/python3/dist-packages
+    ansible_python_interpreter: /ansible/ansible-venv/venv/lib/python3.10/site-packages/ansible
     ansible_network_os: ios
   tasks:
     - name: show version
