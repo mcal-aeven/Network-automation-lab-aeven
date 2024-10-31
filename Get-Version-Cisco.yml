@@ -2,7 +2,7 @@
 - name: Gather version information from Cisco router via SSH
   hosts: "{{ target_hosts | default('all') }}"
   connection: network_cli
-  gather_facts: yes
+  gather_facts: no
   vars:
     ansible_python_interpreter: /ansible/ansible-venv/bin/python
     ansible_network_os: ios
