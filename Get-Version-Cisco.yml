@@ -4,8 +4,7 @@
   connection: network_cli
   gather_facts: no
   vars:
-    ansible python module location: /usr/lib/python3.10/site-packages/ansible
-    ansible collection location: /opt/ansible/network/collections
+    ansible_python_interpreter: /opt/ansible/network/venv/bin/python
     ansible_network_os: ios
   tasks:
     - name: show version
