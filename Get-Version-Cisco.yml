@@ -5,12 +5,12 @@
   gather_facts: yes
   vars:
     ansible_python_interpreter: /ansible/ansible-venv/bin/python
+    ansible_network_os: ios
   tasks:
-    - name: Get version information
-      ios_command:
+    - name: show version
+      cisco.ios.ios_command:
         commands:
           - show version
-      register: version_info
 
     - name: Display version information
       debug:
