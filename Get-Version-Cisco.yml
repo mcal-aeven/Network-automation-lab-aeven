@@ -4,7 +4,7 @@
   connection: network_cli
   gather_facts: yes
   vars:
-    ansible_network_os: cisco.ios.ios
+    ansible_python_interpreter: /ansible/ansible-venv/bin/python
   tasks:
     - name: Get version information
       ios_command:
